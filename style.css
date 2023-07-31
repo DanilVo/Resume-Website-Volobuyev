@@ -1,0 +1,353 @@
+@font-face {
+  font-family: 'Chakra Petch';
+  src: url('/assets/fonts/ChakraPetch-Regular.ttf') format('truetype');
+}
+
+@keyframes bg-animation {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+/*RESPONSIVENESS BY SCREEN SIZE START */
+@media screen and (min-width: 821px) {
+  .bg-image {
+    background-size: 3000px;
+  }
+  .about-me {
+    margin: 0px 80px 50px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  footer {
+    letter-spacing: 3px;
+    line-height: 50px;
+  }
+
+  /* SKILLS SECTION START */
+
+  .skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 45vw;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9)
+      ),
+      url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+    color: white;
+  }
+
+  .skill-header {
+    text-decoration: underline;
+  }
+
+  .skills p {
+    padding: 0px 10px;
+  }
+
+  .hard-skills > span,
+  .soft-skills > span {
+    font-size: xx-large;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 0px 10px;
+  }
+
+  .hard-skills {
+    width: 25%;
+    float: left;
+    height: 10%;
+    transition: 1s;
+    margin-top: 50px;
+    padding-top: 2px;
+  }
+
+  .hard-skills-grid,
+  .soft-skills-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    position: absolute;
+    width: 80%;
+  }
+
+  .skills > i {
+    color: #302323;
+  }
+
+  .soft-skills-grid div,
+  .hard-skills-grid div {
+    box-sizing: border-box;
+    height: fit-content;
+    width: fit-content;
+    margin: 10px;
+    font-size: 1.5vw;
+    text-align: left;
+    border: 2px solid rgb(216, 189, 189);
+    border-radius: 10px;
+  }
+
+  .soft-skills-grid div p,
+  .hard-skills-grid div p {
+    margin-top: 0px;
+  }
+
+  .hard-skills div,
+  .soft-skills div {
+    transform: scale(0);
+    transition: 0.5s;
+  }
+
+  .hard-skills span,
+  .soft-skills span {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  .hard-skills:hover,
+  .soft-skills:hover {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  .soft-skills {
+    width: 25%;
+    height: 10%;
+    float: right;
+    transition: 1s;
+    margin-top: 50px;
+    padding-top: 2px;
+    margin-left: 15px;
+  }
+
+  .soft-skills:hover div,
+  .hard-skills:hover div {
+    transform: scale(1);
+  }
+
+  .hard-skills:hover {
+    margin-left: 4%;
+    width: 100%;
+  }
+
+  .soft-skills:hover {
+    margin-right: 4%;
+    width: 100%;
+  }
+
+  /* SKILLS SECTION END */
+}
+
+@media screen and (max-width: 821px) {
+  .bg-image {
+    background-size: 2500px;
+  }
+
+  .about-me {
+    margin: 0px 60px 50px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .skills {
+    margin: 0px 60px;
+  }
+
+  .hard-skills > span,
+  .soft-skills > span {
+    font-size: xx-large;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .skills p {
+    margin-left: 20px;
+  }
+
+  .skill-header {
+    font-size: 19px;
+    font-weight: 700;
+  }
+}
+/*RESPONSIVENESS BY SCREEN SIZE END */
+
+@keyframes skills-appears {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Chakra Petch';
+  background-color: #e8e5e2;
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+}
+
+/* HEADER START */
+
+.bg-image {
+  z-index: 2;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(2, 5, 4, 0.6),
+      rgba(2, 7, 5, 0.6)
+    ),
+    url('/assets/images/13082021-RETRO-4K.png');
+  height: 100vh;
+  background-repeat: no-repeat;
+  animation: bg-animation 80s infinite linear;
+  animation-direction: alternate;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  box-shadow: 2px 2px black;
+}
+
+header span {
+  z-index: 2;
+  color: white;
+  position: absolute;
+  display: flex;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 5px black;
+}
+
+img[alt='Danil'] {
+  filter: drop-shadow(0 0 0.35rem black);
+  z-index: 2;
+  position: absolute;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+
+/* HEADER END */
+
+
+/* CONTACT ME NAV LINKS START*/
+
+nav {
+  z-index: 1;
+  position: fixed;
+  top: 25%;
+  left: 0;
+  background-color: rgba(2, 5, 4, 0.5);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.show-up {
+  position: absolute;
+  left: -90px;
+  transition: left 0.5s;
+  clip-path: polygon(
+    15% 20%,
+    100% 20%,
+    100% 80%,
+    15% 80%,
+    15% 65%,
+    0 50%,
+    15% 35%
+  );
+  color: white;
+}
+
+a:hover > .show-up {
+  left: 60px;
+  text-align: center;
+}
+
+.linkedin {
+  background-color: #3350e0;
+  width: 70px;
+  padding-left: 10px;
+}
+
+.github {
+  background-color: #9c7a5b;
+  width: 60px;
+  padding-left: 8px;
+}
+
+.email {
+  background-color: #fc5a5a;
+  width: 50px;
+  padding-left: 7px;
+}
+
+a {
+  display: block;
+  position: relative;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+li:nth-of-type(1):hover {
+  background-color: #3350e0;
+  border-top-right-radius: 5px;
+}
+
+li:nth-of-type(2):hover {
+  background-color: #9c7a5b;
+}
+
+li:nth-of-type(3):hover {
+  background-color: #fc5a5a;
+  border-bottom-right-radius: 5px;
+}
+/* CONTACT ME NAV LINKS END*/
+
+main {
+  height: fit-content;
+}
+
+.head-about-me {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 56px;
+  font-weight: 900;
+}
+
+/* FOOTER START */
+
+footer {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: rgba(2, 5, 4, 0.8);
+  color: white;
+}
+/* FOOTER END */
