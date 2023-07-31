@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Chakra Petch';
-  src: url('/assets/fonts/ChakraPetch-Regular.ttf') format('truetype');
+  src: url('assets/fonts/ChakraPetch-Regular.ttf') format('truetype');
 }
 
 @keyframes bg-animation {
@@ -40,7 +40,7 @@
         rgba(0, 0, 0, 0.9),
         rgba(0, 0, 0, 0.9)
       ),
-      url(/assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
+      url(assets/images/florian-olivo-4hbJ-eymZ1o-unsplash.jpg);
     color: white;
   }
 
@@ -212,7 +212,7 @@ header {
       rgba(2, 5, 4, 0.6),
       rgba(2, 7, 5, 0.6)
     ),
-    url('/assets/images/13082021-RETRO-4K.png');
+    url(assets/images/13082021-RETRO-4K.png);
   height: 100vh;
   background-repeat: no-repeat;
   animation: bg-animation 80s infinite linear;
